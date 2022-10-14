@@ -13,23 +13,23 @@
 </head>
 
 <body>
-    <nav class="nav collapsible">
-        <a class="nav__brand" href="/"><img src="images/logo.svg" alt="logo" /></a>
-        <svg class="icon icon--white nav__toggler">
-        <use xlink:href="../images/sprite.svg#menu"></use>
-      </svg>
-        <ul class="list nav__list collapsible__content">
-            <li class="nav__item">
-                <a href=""></a>Hosting</li>
-            <li class="nav__item">
-                <a href=""></a>VPN</li>
-            <li class="nav__item">
-                <a href=""></a>Domain</li>
-            <li class="nav__item">
-                <a href=""></a>Pricing</li>
-        </ul>
-    </nav>
-
+    <!-- blk blk-dark left last hero so that it overwrites last props -->
+    <section class="block block--dark block--skewed-left hero">
+        <!-- container for 1140px and grid for alignment -->
+        <div class="container grid grid--cols-2">
+            <header class="block__header hero__content">
+                <h1 class="block__heading">Cloud Hosting for Pros</h1>
+                <p class="hero__tagline">
+                    Deploy your websites in less than 60 seconds.
+                </p>
+                <a href="" class="btn btn--accent btn--long">Get Started</a>
+            </header>
+            <picture>
+                <source type="image/webp" srcset="./images/banner.webp 1x, images/banner@2x.webp 2x" />
+                <source type="image/png" srcset="./images/banner.png 1x, images/banner@2x.png 2x" />
+            </picture>
+        </div>
+    </section>
     <script src="js/main.js"></script>
 </body>
 
