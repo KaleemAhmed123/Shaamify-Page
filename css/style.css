@@ -217,6 +217,7 @@ a {
     border: none;
     border-radius: 40px;
     margin: 1rem 0;
+    outline: 0;
     cursor: pointer;
     white-space: nowrap;
     text-align: center;
@@ -226,6 +227,13 @@ a {
 
 .btn:hover {
     box-shadow: none;
+}
+
+.btn .icon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
 }
 
 .btn--primary {
@@ -311,7 +319,7 @@ a {
 .input-group .input {
     border: none;
     flex-grow: 1;
-    padding: 1.5rem;
+    padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -351,12 +359,20 @@ a {
 }
 
 .card--secondary .badge--secondary {
-    /* that inside color is same */
+    /* that inner color is same */
     background: #02cdf1;
+}
+
+.card--primary .badge--primary {
+    background: #126de4;
 }
 
 
 /* ==== Plans ==== */
+
+.plan {
+    transition: transform 0.3s ease-out;
+}
 
 .plan__name {
     color: #fff;
@@ -387,10 +403,16 @@ a {
 .plan .list__item {
     margin-bottom: 2rem;
     letter-spacing: 1.25px;
+    font-size: 2rem;
+    /*!critic*/
 }
 
 .plan {
     position: relative;
+}
+
+.plan--popular {
+    transform: scale(1.1);
 }
 
 .plan--popular .card__header::before {
@@ -402,6 +424,14 @@ a {
     position: absolute;
     top: -5px;
     right: 5%;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+}
+
+.plan--popular:hover {
+    transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -749,5 +779,75 @@ a {
     .hero__content {
         text-align: left;
         align-self: center;
+    }
+}
+
+
+/* ==== Domain Block */
+
+.block-domain .input-group {
+    box-shadow: 0 0 50px 30px #e6ebee;
+    border: 0;
+    max-width: 670px;
+    margin: 4rem auto;
+    /* margin: 0 auto; */
+}
+
+.block-domain__prices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6rem);
+    font-size: 2rem;
+    font-weight: 600;
+    justify-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .block-domain__prices {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+}
+
+
+/* ==== Plans Block ===== */
+
+
+/* otherclasses are utility so done already */
+
+.block-plans .grid {
+    gap: 8rem 5rem;
+    margin: 10rem 0;
+}
+
+.block-plans .card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+/* ==== Feature section */
+
+.feature {
+    gap: 4rem 2rem;
+    margin: 10rem 0;
+}
+
+.feature:first-of-type {
+    margin-top: 6rem;
+}
+
+.feature__heading {
+    margin: 1rem 0;
+}
+
+.feature__image {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .feature:nth-child(even) .feature__content {
+        order: 2;
     }
 }
