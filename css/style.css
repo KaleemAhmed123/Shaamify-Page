@@ -89,6 +89,12 @@ a {
     }
 }
 
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+}
+
 
 /* === Links === */
 
@@ -97,6 +103,7 @@ a {
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .link-arrow::after {
@@ -358,7 +365,7 @@ a {
 
 .card__header,
 .card__body {
-    padding: 2rem 7%;
+    padding: 2.5rem 8%;
 }
 
 .card--primary .card__header {
@@ -424,14 +431,14 @@ a {
     transform: scale(1.1);
 }
 
-
-/* .plan {
-    position: relative;
-} */
-
-.plan--popular .card__header {
+.plan {
     position: relative;
 }
+
+
+/* .plan--popular .card__header {
+    position: relative;
+} */
 
 .plan--popular .card__header::before {
     content: url(../images/popular.svg);
@@ -441,7 +448,7 @@ a {
     display: inline-block;
     position: absolute;
     top: -5px;
-    right: 5%;
+    right: 3%;
 }
 
 .plan:hover {
@@ -807,21 +814,16 @@ a {
     margin: 2rem 0 5rem;
 }
 
-.hero__content .btn {
-    box-shadow: none;
-}
-
-.hero__image {
-    width: 100%;
-}
-
 @media screen and (min-width: 768px) {
-    .hero {
-        padding-top: 0;
-    }
     .hero__content {
         text-align: left;
         align-self: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        padding-top: 0;
     }
 }
 
@@ -829,7 +831,7 @@ a {
 /* ==== Domain Block */
 
 .block-domain .input-group {
-    box-shadow: 0 0 50px 30px #e6ebee;
+    box-shadow: 0 0 30px 20px #e6ebee;
     border: 0;
     max-width: 670px;
     margin: 4rem auto;
@@ -862,11 +864,11 @@ a {
 
 .block-plans .grid {
     gap: 8rem 5rem;
-    margin: 10rem 0;
+    /* margin: 10rem 0; */
 }
 
 .block-plans .card {
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 auto;
 }
 
@@ -875,7 +877,7 @@ a {
 
 .feature {
     gap: 4rem 2rem;
-    margin: 10rem 0;
+    margin: 8rem 0;
 }
 
 .feature:first-of-type {
@@ -884,10 +886,6 @@ a {
 
 .feature__heading {
     margin: 1rem 0;
-}
-
-.feature__image {
-    width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -899,17 +897,12 @@ a {
 
 /* ==== Showcase Block */
 
-.block-showcase__image>img {
-    width: 100%;
-}
-
 @media screen and (min-width: 768px) {
     .block-showcase .grid {
-        gap: 3rem;
-        /* grid-template-columns: 1fr 1fr; */
+        /* gap: 3rem; */
         grid-template-columns: 50% 50%;
         /*width not determined by cntent*/
-        margin-top: 4rem;
+        /* margin-top: 4rem; */
     }
     .block-showcase__image {
         /* width: auto;
@@ -924,7 +917,7 @@ a {
 }
 
 
-/*  */
+/* critics */
 
 @media screen and (max-width: 500px) {
     .block-showcase {
@@ -937,6 +930,7 @@ a {
 
 .footer {
     background: #232323;
+    padding-top: 10rem;
 }
 
 .footer a {
@@ -956,10 +950,8 @@ a {
 .footer__heading {
     text-transform: uppercase;
     font-weight: 600;
-}
-
-.footer__section .list {
-    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1.5;
 }
 
 .footer__brand {
@@ -967,9 +959,8 @@ a {
     text-align: center;
 }
 
-.footer__brand>img {
-    width: 100%;
-    max-width: 220px;
+.footer__brand img {
+    max-width: 230px;
 }
 
 .footer__copyright {
@@ -979,6 +970,9 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+    .footer {
+        font-size: 1.5rem;
+    }
     .footer__sections {
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
@@ -991,7 +985,7 @@ a {
     }
     .footer__brand {
         order: -1;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
     }
     .footer__copyright {
         font-size: 1.5rem;
@@ -1002,4 +996,8 @@ a {
     .footer__heading {
         font-size: 1.75rem;
     }
+}
+
+.callout-signup {
+    transform: translateY(5rem);
 }
